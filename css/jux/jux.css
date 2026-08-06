@@ -1,0 +1,1295 @@
+/* ==========================================================
+                        JUX PAGE
+========================================================== */
+
+/* ==========================================================
+                        HERO
+========================================================== */
+
+.jux-hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:140px 0 110px;
+
+    background:
+        radial-gradient(circle at top right,
+        rgba(255,123,0,.12),
+        transparent 35%),
+
+        radial-gradient(circle at bottom left,
+        rgba(255,123,0,.08),
+        transparent 35%),
+
+        var(--color-background);
+
+}
+
+/* ==========================================================
+                    OVERLAY
+========================================================== */
+
+.jux-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            rgba(0,0,0,.05),
+
+            rgba(0,0,0,.45)
+
+        );
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+                    CONTAINER
+========================================================== */
+
+.jux-hero .container{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+/* ==========================================================
+                    CONTENT
+========================================================== */
+
+.jux-content{
+
+    animation:fadeLeft .8s ease;
+
+}
+
+.jux-content h1{
+
+    margin-bottom:25px;
+
+    font-size:clamp(2.8rem,5vw,4.5rem);
+
+}
+
+.jux-content p{
+
+    max-width:650px;
+
+    margin-bottom:35px;
+
+    line-height:1.9;
+
+}
+
+/* ==========================================================
+                    BADGE
+========================================================== */
+
+.jux-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:rgba(255,123,0,.12);
+
+    color:var(--color-primary);
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+                    IMAGE
+========================================================== */
+
+.jux-image{
+
+    animation:fadeRight .8s ease;
+
+}
+
+.jux-image img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    box-shadow:
+
+        0 20px 50px rgba(0,0,0,.45);
+
+    transition:.45s ease;
+
+}
+
+.jux-image img:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* ==========================================================
+                    BUTTONS
+========================================================== */
+
+.jux-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+/* ==========================================================
+                    FEATURED VIDEO
+========================================================== */
+
+.jux-featured{
+
+    position:relative;
+
+    padding:110px 0;
+
+    background:var(--color-secondary);
+
+}
+
+/* ==========================================================
+                    CONTENT
+========================================================== */
+
+.jux-featured-content{
+
+    display:grid;
+
+    grid-template-columns:1.15fr .85fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+/* ==========================================================
+                    THUMBNAIL
+========================================================== */
+
+.jux-thumbnail{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    border:1px solid var(--color-border);
+
+    box-shadow:
+
+        0 20px 50px rgba(0,0,0,.4);
+
+}
+
+.jux-thumbnail img{
+
+    width:100%;
+
+    display:block;
+
+    transition:.45s ease;
+
+}
+
+.jux-thumbnail:hover img{
+
+    transform:scale(1.06);
+
+}
+
+/* ==========================================================
+                    OVERLAY
+========================================================== */
+
+.jux-thumbnail::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            rgba(0,0,0,.08),
+
+            rgba(0,0,0,.6)
+
+        );
+
+    transition:.35s;
+
+}
+
+.jux-thumbnail:hover::after{
+
+    background:
+
+        linear-gradient(
+
+            rgba(0,0,0,.18),
+
+            rgba(0,0,0,.72)
+
+        );
+
+}
+
+/* ==========================================================
+                    PLAY BUTTON
+========================================================== */
+
+.jux-play{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,123,0,.95);
+
+    color:#fff;
+
+    font-size:2rem;
+
+    transition:.35s ease;
+
+    z-index:5;
+
+}
+
+.jux-thumbnail:hover .jux-play{
+
+    transform:
+
+        translate(-50%,-50%)
+
+        scale(1.1);
+
+}
+
+/* ==========================================================
+                    INFO
+========================================================== */
+
+.jux-featured-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+.jux-featured-info h2{
+
+    margin:0;
+
+}
+
+.jux-featured-info p{
+
+    line-height:1.9;
+
+    color:var(--color-text-light);
+
+}
+
+/* ==========================================================
+                    EPISODE INFO
+========================================================== */
+
+.jux-meta{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+}
+
+.jux-meta span{
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:rgba(255,123,0,.10);
+
+    color:var(--color-primary);
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+                    BUTTONS
+========================================================== */
+
+.jux-featured-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+}
+
+/* ==========================================================
+                    EPISODES
+========================================================== */
+
+.jux-episodes{
+
+    position:relative;
+
+    padding:110px 0;
+
+    background:var(--color-background);
+
+}
+
+/* ==========================================================
+                    GRID
+========================================================== */
+
+.jux-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+
+    gap:35px;
+
+}
+
+/* ==========================================================
+                    CARD
+========================================================== */
+
+.jux-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    background:var(--color-card);
+
+    border:1px solid var(--color-border);
+
+    transition:all .35s ease;
+
+}
+
+.jux-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--color-primary);
+
+    box-shadow:
+
+        0 20px 45px rgba(0,0,0,.35);
+
+}
+
+/* ==========================================================
+                    THUMBNAIL
+========================================================== */
+
+.jux-card-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.jux-card-image img{
+
+    width:100%;
+
+    display:block;
+
+    transition:.45s ease;
+
+}
+
+.jux-card:hover .jux-card-image img{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================================
+                    IMAGE OVERLAY
+========================================================== */
+
+.jux-card-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            rgba(0,0,0,.08),
+
+            rgba(0,0,0,.55)
+
+        );
+
+    transition:.35s;
+
+}
+
+.jux-card:hover .jux-card-image::after{
+
+    background:
+
+        linear-gradient(
+
+            rgba(0,0,0,.18),
+
+            rgba(0,0,0,.72)
+
+        );
+
+}
+
+/* ==========================================================
+                    PLAY
+========================================================== */
+
+.jux-card-play{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,123,0,.95);
+
+    color:#fff;
+
+    font-size:1.6rem;
+
+    opacity:0;
+
+    transition:.35s ease;
+
+    z-index:5;
+
+}
+
+.jux-card:hover .jux-card-play{
+
+    opacity:1;
+
+    transform:
+
+        translate(-50%,-50%)
+
+        scale(1.1);
+
+}
+
+/* ==========================================================
+                    EPISODE NUMBER
+========================================================== */
+
+.jux-episode{
+
+    position:absolute;
+
+    top:18px;
+
+    left:18px;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:rgba(255,123,0,.92);
+
+    color:#fff;
+
+    font-size:.8rem;
+
+    font-weight:700;
+
+    z-index:6;
+
+}
+
+/* ==========================================================
+                    DURATION
+========================================================== */
+
+.jux-duration{
+
+    position:absolute;
+
+    right:18px;
+
+    bottom:18px;
+
+    padding:6px 12px;
+
+    border-radius:8px;
+
+    background:rgba(0,0,0,.75);
+
+    color:#fff;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+    z-index:6;
+
+}
+
+/* ==========================================================
+                    CONTENT
+========================================================== */
+
+.jux-card-content{
+
+    padding:26px;
+
+}
+
+.jux-card-content h3{
+
+    margin-bottom:14px;
+
+    transition:.3s;
+
+}
+
+.jux-card:hover h3{
+
+    color:var(--color-primary);
+
+}
+
+.jux-card-content p{
+
+    color:var(--color-text-light);
+
+    line-height:1.8;
+
+}
+
+/* ==========================================================
+                    CARD FOOTER
+========================================================== */
+
+.jux-card-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:22px;
+
+}
+
+/* ==========================================================
+                    TAGS
+========================================================== */
+
+.jux-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+.jux-tag{
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    background:rgba(255,123,0,.12);
+
+    color:var(--color-primary);
+
+    font-size:.78rem;
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+                    BUTTON
+========================================================== */
+
+.jux-watch{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:12px 22px;
+
+    border-radius:12px;
+
+    background:var(--color-primary);
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.jux-watch:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+        0 12px 25px rgba(255,123,0,.35);
+
+}
+
+/* ==========================================================
+                    SHINE EFFECT
+========================================================== */
+
+.jux-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.18),
+
+            transparent
+
+        );
+
+    transform:skewX(-25deg);
+
+    transition:.7s;
+
+    z-index:2;
+
+}
+
+.jux-card:hover::before{
+
+    left:140%;
+
+}
+
+/* ==========================================================
+                    EXTRA INFO
+========================================================== */
+
+.jux-extra{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:18px;
+
+    color:var(--color-text-light);
+
+    font-size:.85rem;
+
+}
+
+.jux-extra span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+/* ==========================================================
+                    BORDER GLOW
+========================================================== */
+
+.jux-card:hover{
+
+    box-shadow:
+
+        0 18px 40px rgba(0,0,0,.35),
+
+        0 0 25px rgba(255,123,0,.18);
+
+}
+
+/* ==========================================================
+                    TITLE EFFECT
+========================================================== */
+
+.jux-card h3{
+
+    transition:color .3s ease;
+
+}
+
+.jux-card:hover h3{
+
+    color:var(--color-primary);
+
+}
+
+/* ==========================================================
+                    IMAGE EFFECT
+========================================================== */
+
+.jux-card-image{
+
+    background:#000;
+
+}
+
+.jux-card-image img{
+
+    opacity:.96;
+
+}
+
+.jux-card:hover .jux-card-image img{
+
+    opacity:1;
+
+}
+
+/* ==========================================================
+                    JUX CTA
+========================================================== */
+
+.jux-cta{
+
+    position:relative;
+
+    padding:120px 0;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at top,
+        rgba(255,123,0,.12),
+        transparent 60%),
+        var(--color-secondary);
+
+}
+
+/* ==========================================================
+                    CONTENT
+========================================================== */
+
+.jux-cta-content{
+
+    max-width:900px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+}
+
+.jux-cta-content h2{
+
+    margin-bottom:25px;
+
+}
+
+.jux-cta-content p{
+
+    max-width:700px;
+
+    margin:0 auto 45px;
+
+    line-height:1.9;
+
+}
+
+/* ==========================================================
+                    BUTTONS
+========================================================== */
+
+.jux-cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+/* ==========================================================
+                    STATS
+========================================================== */
+
+.jux-stats{
+
+    margin-top:90px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+}
+
+/* ==========================================================
+                    STAT CARD
+========================================================== */
+
+.jux-stat{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    border-radius:18px;
+
+    background:var(--color-card);
+
+    border:1px solid var(--color-border);
+
+    transition:var(--transition);
+
+}
+
+.jux-stat:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--color-primary);
+
+    box-shadow:
+
+        0 18px 40px rgba(0,0,0,.35),
+
+        0 0 20px rgba(255,123,0,.18);
+
+}
+
+/* ==========================================================
+                    ICON
+========================================================== */
+
+.jux-stat i{
+
+    font-size:2rem;
+
+    color:var(--color-primary);
+
+    margin-bottom:18px;
+
+}
+
+/* ==========================================================
+                    NUMBER
+========================================================== */
+
+.jux-stat-number{
+
+    display:block;
+
+    font-size:2.6rem;
+
+    font-weight:800;
+
+    color:var(--color-primary);
+
+    margin-bottom:10px;
+
+}
+
+/* ==========================================================
+                    TITLE
+========================================================== */
+
+.jux-stat-title{
+
+    font-size:1rem;
+
+    color:var(--color-text-light);
+
+}
+
+/* ==========================================================
+                    HOVER SHINE
+========================================================== */
+
+.jux-stat::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-130%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.15),
+
+            transparent
+
+        );
+
+    transform:skewX(-25deg);
+
+    transition:.8s;
+
+}
+
+.jux-stat:hover::before{
+
+    left:140%;
+
+}
+
+/* ==========================================================
+                    RESPONSIVE
+========================================================== */
+
+/* ===============================
+            1200px
+=============================== */
+
+@media (max-width:1200px){
+
+    .jux-hero .container,
+
+    .jux-featured-content{
+
+        gap:50px;
+
+    }
+
+}
+
+/* ===============================
+            992px
+=============================== */
+
+@media (max-width:992px){
+
+    .jux-hero{
+
+        padding:120px 0 90px;
+
+    }
+
+    .jux-hero .container,
+
+    .jux-featured-content{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .jux-content{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .jux-buttons,
+
+    .jux-featured-buttons,
+
+    .jux-cta-buttons{
+
+        justify-content:center;
+
+    }
+
+}
+
+/* ===============================
+            768px
+=============================== */
+
+@media (max-width:768px){
+
+    .jux-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .jux-stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .jux-card-footer{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:18px;
+
+    }
+
+    .jux-watch{
+
+        width:100%;
+
+    }
+
+}
+
+/* ===============================
+            576px
+=============================== */
+
+@media (max-width:576px){
+
+    .jux-hero{
+
+        padding:100px 0 70px;
+
+    }
+
+    .jux-featured,
+
+    .jux-episodes,
+
+    .jux-cta{
+
+        padding:70px 0;
+
+    }
+
+    .jux-content h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .jux-card-content{
+
+        padding:20px;
+
+    }
+
+    .jux-featured-info{
+
+        text-align:center;
+
+    }
+
+}
+
+/* ===============================
+            420px
+=============================== */
+
+@media (max-width:420px){
+
+    .jux-play,
+
+    .jux-card-play{
+
+        width:58px;
+
+        height:58px;
+
+        font-size:1.3rem;
+
+    }
+
+    .jux-meta{
+
+        justify-content:center;
+
+    }
+
+    .jux-tag{
+
+        font-size:.72rem;
+
+    }
+
+}
+
+/* ==========================================================
+                    PERFORMANCE
+========================================================== */
+
+.jux-card,
+
+.jux-thumbnail,
+
+.jux-image,
+
+.jux-stat{
+
+    will-change:transform;
+
+}
+
+/* ==========================================================
+                    ACCESSIBILITY
+========================================================== */
+
+.jux-watch:focus,
+
+.jux-buttons .btn:focus,
+
+.jux-featured-buttons .btn:focus{
+
+    outline:2px solid var(--color-primary);
+
+    outline-offset:4px;
+
+}
+
